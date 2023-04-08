@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Calculator App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<section class="calculator-section">
+		<div class="main-container">
+			<label for="num1">First Number</label>
+			<input type="text" id="num1">
+			<select id="operator">
+				<option>+</option>
+				<option>-</option>
+				<option>*</option>
+				<option>/</option>
+			</select>
+			<label for="num2">Second Number</label>
+			<input type="text" id="num2">
+			<button class="btn" id="calculate-btn" onclick="calculate()">Calculate</button>
+		</div>
+		<div class="result-container">
+		<div class="result" id="result"></div>
+	</div>
+
+	</section>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

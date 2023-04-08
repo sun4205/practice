@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Calculator App</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+
+	<section class="calculator-section">
+		<div class="calc-container">
+			<div class="display-container">
+				<div id="display" class="display"></div>
+			</div>
+
+			<div class="num-func-container">
+				<div class="number-container">
+					<div class="row row1">
+						<div onclick="numberClicked(1)">1</div>
+						<div onclick="numberClicked(2)">2</div>
+						<div onclick="numberClicked(3)">3</div>
+					</div>
+					<div class="row row2">
+						<div onclick="numberClicked(4)">4</div>
+						<div onclick="numberClicked(5)">5</div>
+						<div onclick="numberClicked(6)">6</div>
+					</div>
+					<div class="row row3">
+						<div onclick="numberClicked(7)">7</div>
+						<div onclick="numberClicked(8)">8</div>
+						<div onclick="numberClicked(9)">9</div>
+					</div>
+					<div class="row row4">
+						<div onclick="numberClicked('.')">.</div>
+						<div onclick="numberClicked(0)">0</div>	
+						<div onclick="functionClicked('c')">C</div>						
+					</div>
+				</div>
+				<div class="function-container">
+					<div onclick="functionClicked('+')" class="row">+</div>
+					<div onclick="functionClicked('-')" class="row">-</div>
+					<div onclick="functionClicked('x')" class="row">x</div>
+					<div onclick="functionClicked('/')" class="row">/</div>
+					<div onclick="functionClicked('=')" class="row">=</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>
