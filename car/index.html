@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/flexbox.css">	
+</head>
+<body>
+	<select id="cars" onchange="onCarChange()">
+		<option value="none" selected>Please select a car</option>
+        <option value="Mercedes">Mercedes</option>
+		<option value="Kia">Kia</option>
+		<option value="BMW">BMW</option>
+		<option value="Toyota">Toyota</option>
+	</select>
+
+	<div class="car-images-section" id="car-images-section">
+		<div class="car-images-container">
+			<div><img src="" id="car-img1"></div>
+			<div><img src="" id="car-img2"></div>		
+		</div>
+        <div class="car-images-container2">
+		   	<div><img src="" id="car-img3"></div>
+			<div><img src="" id="car-img4"></div>	
+		</div>
+	</div>
+
+	
+
+	<div id="message">Please select a car from the dropdown.</div>
+
+
+
+	<script type="text/javascript">		
+		function onCarChange() {		
+			var carDropdown = document.getElementById("cars");			
+			var chosenCar = carDropdown.value;			
+			var carImagesSection = document.getElementById("car-images-section");			
+			var message = document.getElementById("message");			
+			if (chosenCar === "Mercedes") {				
+				carImagesSection.style.display="block";								
+				message.style.display="none";				
+				document.getElementById("car-img1").src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-mercedes-benz-a220-4matic-108-1544471119.jpg?crop=0.675xw:0.505xh;0.0442xw,0.464xh&resize=640:*";				
+				document.getElementById("car-img2").src="https://media.ed.edmunds-media.com/mercedes-benz/amg-gt/2020/oem/2020_mercedes-benz_amg-gt_sedan_53_fq_oem_1_1280.jpg"; 
+				document.getElementById("car-img3").src="https://s1.cdn.autoevolution.com/images/models/MERCEDES-BENZ_GLC-2022_main.jpg"; 
+				document.getElementById("car-img4").src="https://di-uploads-development.dealerinspire.com/keyeseuropeanmb/uploads/2018/10/2018-GLC-COUPE-GALLERY-009-SET-H-FE-DR.jpg"; 
+			} else if (chosenCar === "Kia") {				
+				carImagesSection.style.display="block";				
+				message.style.display="none";				
+				document.getElementById("car-img1").src="https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/seltos/showroom/x-line/Seltos_X_Line-Section_1.jpg";
+				document.getElementById("car-img2").src="https://cars.usnews.com/static/images/Auto/izmo/i159614350/2021_kia_seltos_angularfront.jpg";
+				document.getElementById("car-img3").src="https://www.motortrend.com/uploads/sites/5/2020/03/2021-Kia-Seltos-SX-AWD-18.jpg?fit=around%7C875:492.1875";
+				document.getElementById("car-img4").src="https://www.financialexpress.com/wp-content/uploads/2022/04/2022-Kia-Seltos.jpg";
+
+			} else if (chosenCar === "BMW") {
+				carImagesSection.style.display="block";
+				message.style.display="none";
+				document.getElementById("car-img1").src="https://cdn.motor1.com/images/mgl/3WW1j1/s3/2022-bmw-i7.jpg";
+				document.getElementById("car-img2").src="https://www.topgear.com/sites/default/files/2022/06/1-BMW-3-Series.jpg";
+				document.getElementById("car-img3").src="https://www.bmw-motorsport.com/content/dam/bmw/marketBMWSPORTS/bmw-motorsport_com/assets/bmw-m-motorsport/race-cars/bmw-m4-gt4-2023/bmw-m4-gt4-stage-teaser-01.jpg.asset.1655285283212.jpg";
+				document.getElementById("car-img4").src="https://hips.hearstapps.com/hmg-prod/images/p90465597-1654035021.jpeg?crop=0.774xw:0.870xh;0.147xw,0.130xh&resize=640:*";
+
+
+			} else if (chosenCar === "Toyota") {
+				carImagesSection.style.display="block";
+				message.style.display="none";
+				document.getElementById("car-img1").src="https://static.fzinternal.com/common/mfg/Toyota/Venza.png?w=350";
+				document.getElementById("car-img2").src="https://thumbor.forbes.com/thumbor/fit-in/960x/filters:format(jpg)/https://www.forbes.com/wheels/wp-content/uploads/2022/06/2023_Toyota_CorollaCross_Hybrid1B.png"; 
+				document.getElementById("car-img3").src="https://hips.hearstapps.com/hmg-prod/images/2023-toyota-highlander-front-three-quarters-1652203180.jpg?crop=0.891xw:1.00xh;0.0554xw,0&resize=640:*"; 
+				document.getElementById("car-img4").src="https://media.ed.edmunds-media.com/toyota/c-hr/2022/oem/2022_toyota_c-hr_4dr-suv_limited_fq_oem_1_600.jpg";
+
+
+			} else if (chosenCar === "none") {				
+				carImagesSection.style.display="none";				
+				message.style.display="block";				
+				document.getElementById("car-img1").src="";
+				document.getElementById("car-img2").src=""; 
+				document.getElementById("car-img3").src=""; 
+				document.getElementById("car-img4").src="";
+
+			}
+		}
+		/*
+		Homework:
+		1. add images for the other cars
+		2. have two images per row (use flexbox)
+		3. what is a function
+		4. javascript events (onlick, onchange, onmouseover, onmouseout, onkeydown, onload) --> watch videos
+		*/
+	</script>
+</body>
+</html>
+
+
+

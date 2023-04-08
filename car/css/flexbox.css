@@ -1,0 +1,21 @@
+.car-images-container, .car-images-container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 630px;
+    margin: 0 auto;
+}
+
+#car-img1,#car-img2,#car-img3,#car-img4 {
+	width: 300px;
+	height: 200px;
+
+}
+.car-images-container > div,  .car-images-container2 > div {
+	 margin-bottom: 10px;
+}
+
+.car-images-section {
+	display: none;
+}

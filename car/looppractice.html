@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loop's practice</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var numbers = [12,334,56,56,543,32,32,4,565,767,5454,343,23232,46,55,4543332,323];
+		for (num of numbers) {
+			// console.log(num);
+			if (num>40 && num<600 && num%2===0) {
+				console.log(num);
+
+			}
+		}
+
+		for(num of numbers) {
+			if(num>30 && num%2===0 && num<5500) {
+				console.log("question1" + num);
+			}
+		}
+
+		var words = ["hello", "my", "name", "is", "Hanna", "and", "I", "want", "to", "go", "on", "a", "vacation"];
+		var result = ""; // hello my name
+		for (sentence of words) {
+			// console.log(sentence);
+			result = result + " " +sentence;
+		}
+		console.log(result);
+
+		 var result = "";
+		 for(word of words){
+		 	result = result + " " + word;
+		 } console.log(result);
+
+
+
+		var count = 0;
+		for (num of numbers) {
+			if (num>40 && num<600 && num%2===0) {
+				count = count + 1;
+			}
+		}
+		console.log("the count is " + count);
+
+
+		var count=0;
+		for(num of numbers){
+			if(num>20 && num%2!==0 && num<10000){
+				count++;
+			}
+		} 
+		console.log("the count" + count);
+
+
+
+		// Homework
+		var nums = [56,34,27,-65,27,-88,-17,-27,-88,-43,45,39,57,90,-12,66,12,7,13,-7,34,27,14,99,87,44,23,33];
+		/*
+		0. print all the numbers		
+		1. print all the negative numbers
+		2. print all the positive numbers
+		3. print all the numbers that are between -10 and 40
+		4. print the sum of all positive numbers
+		5. print the sum of all negative numbers
+		6. print the sum of all numbers
+		7. print the sum of all positive even numbers
+		8. print the sum of all negative numbers that are odd
+		*/
+		for (var num of nums) {
+			console.log("The number 0 is", num);
+		}
+
+		for (var num of nums) {
+			if (num<0) {
+				console.log("The number 1 is", num);
+			}
+		}
+
+		for (var num of nums) {
+			if (num>0) {
+				console.log("The number 2 is", num);
+			}
+		}
+		for (var num of nums) {
+			if (num<40 && num >-10){
+				console.log("The number 3 is", num);
+			}
+		}
+		var sum = 0;
+		for (var num of nums) {
+			if (num % 2 ===0 ) {
+				sum = sum + num;
+							}
+		} console.log("The number 4 is", sum);
+        var sum = 0
+		for (var num of nums) {
+			if (num %2 !=0) {
+				sum = sum + num;				
+		}
+			}console.log("The number 5 is", sum);
+
+		var sum = 0 
+	    for (var num of nums) {
+	    	sum = num + sum;
+		}
+		console.log("The number 6 is", sum);
+
+		var sum = 0	
+		for (var num of nums) {
+			if (num % 2 ===0 && num > 0 ) {
+				sum = sum + num;
+			}
+		}	
+		console.log("The number 7 is", sum);
+
+		var sum = 0
+		for (var num of nums) {
+			if (num % 2 !=0 && num <0) {
+				sum = sum + num;
+			}
+		} 
+		console.log ("The number 8 is", sum);
+
+
+		
+		
+		var names = ["hanna","Mir","Christian Bale","Robert","Philip"]
+
+		for (var name of names) {
+			if (name.length < 7) {
+				console.log(name);
+			}
+		}
+		var result2="";
+		for (name of names) {
+			if (name.length<7) {
+			result2=result2 + " " +name
+		}
+		} 
+		console.log(result2);
+
+		var result3="";
+		for(name of names) {
+			if(name.length<6){
+				result3=result3+""+name
+			}
+		}
+		console.log("result3"+result3);
+		
+		const batman = {
+			name : "Christian Bale",
+			relationship : "hanna's husband",
+			hobby : "flying",
+			occupation : "actor",
+			age: 50,
+			location: "manhattan",
+			food: "beef",
+			drink: "mango"
+
+		};
+
+		var spiderman = {
+			name : "Mir",
+			hobby : "sleep",
+			occupation : "software engineer",
+			relationship : "single",
+			age: 26,
+			location: "queens",
+			food: "rice",
+			drink: "starbucks"
+		}
+
+		var wonderwoman = {
+			name : "hanna",
+			hobby : "ballet",
+			occupation : "computer programmer",
+			relationship : "Christian Bale's wife",
+			age: 15,
+			location: "brooklyn",
+			food: "chicken",
+			drink: "pineapple"
+		}
+
+ 		
+
+		/* homework
+			1. print only name and relationship from wonderwoman
+			2. print only name and relationship for all the objects using a loop
+			3. print name, age and location for all the objects that has age less than 30 using a loop
+			4. print all the keys and values for wonderwoman
+		*/
+
+		
+
+		console.log (batman.hobby);
+		console.log (batman["hobby"]);
+
+		console.log("my name is " + batman.name + " and I am an " + batman.occupation);
+		
+		var superhero = [spiderman,wonderwoman,batman];
+
+		
+		for (var hero of superhero) {
+			console.log("Hi my name is " + hero.name + " and my hobby is " + hero.hobby	);
+		}
+
+		// looping through keys of an object
+		for (var key in spiderman) {
+			console.log("My 4 " + key + " is " + spiderman[key]);
+		}
+		
+
+		console.log ("Question 1 " + wonderwoman.name +" "+ wonderwoman.relationship);
+
+		for (var hero of superhero) {
+			console.log("Question 2 " + hero.name + " " + hero.relationship);
+		}
+
+		for (var hero of superhero) {
+			if (hero.age<30) {
+				console.log("Question 3 " + hero.name + " " +hero.age + " " + hero.location);
+			}
+		}
+
+		for (var key in wonderwoman) {
+			console.log ("Question 4 " + key +" " + wonderwoman[key]);
+		}
+
+		
+
+
+//------------------------------------------------------------------------------------------
+
+
+
+
+			
+
+
+		// print all the info without a loop
+		// console.log(spiderman.name);
+		// console.log(spiderman.hobby);
+		// console.log(spiderman.occupation);
+		// console.log(spiderman.relathionship);
+		// console.log(spiderman.age);
+
+
+
+ 		
+
+	</script>
+
+
+
+</body>
+</html>

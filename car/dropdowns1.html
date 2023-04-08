@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>more dropdowns</title>
+</head>
+<body>
+	<select id="countries" onchange="onCountryChange()">
+		<option value="none" selected>Please select a countries</option>
+        <option value="SouthKorea">South Korea</option>
+		<option value="USA">USA</option>
+		<option value="Germany">Germany</option>
+		<option value="France">France</option>
+	</select>
+
+
+	
+	<select id = "cities"></select>
+
+
+	
+<div id = "test-class"></div>
+
+
+	<script type="text/javascript">
+		var el = document.getElementById("test-class");
+		el.setAttribute("class","my-class2");
+		el.setAttribute("food","beef");
+		
+		function onCountryChange() {
+			var countryDropdown = document.getElementById("countries");
+			var citiesDropDown = document.getElementById("cities");
+			var country=countryDropdown.value;
+		
+
+			if (country==="SouthKorea") {									
+				citiesDropDown.innerText="";
+	 			var cities = ["Seoul","Pohang","Pusan"];
+	 			
+	 			for (city of cities) {
+	 				var op = document.createElement("option");//<option></option>
+	 				op.innerText=city;// <option>Seoul</option>
+	 				op.setAttribute("value", city);// <option value="Seoul">Seoul</option>
+	 				citiesDropDown.appendChild(op);
+	 				// <select id="cities"> 
+						//<option value="Seoul">Seoul</option>
+						//<option value="Pusan">Pusan</option>
+					//</select>
+	 			}
+	 			// var option1 = document.createElement("option");
+				// option1.innerText = "Seoul";
+				// option1.setAttribute("value", "Seoul");
+
+				// var option2 = document.createElement("option");
+				// option2.innerText = "Pusan";
+				// option1.setAttribute("value", "Pusan");
+
+				// var option3 = document.createElement("option");
+				// option3.innerText = "Pohang";
+				// option1.setAttribute("value", "Pohang");
+
+				// citiesDropDown.appendChild(option1);
+				// citiesDropDown.appendChild(option2);
+				// citiesDropDown.appendChild(option3);
+
+	 			
+
+ 			} else if (country==="USA") {
+ 				citiesDropDown.innerHTML="";
+
+ 				var cities = ["Chicago","NY","LA"];
+
+ 				for (city of cities) {
+ 					var op = document.createElement("option");
+ 					op.innerText=city;
+ 					op.setAttribute("value",city);
+ 					citiesDropDown.appendChild(op);
+ 				}
+ 				// citiesDropDown.innerHTML = "";				
+				// var option1 = document.createElement("option");
+				// option1.innerText = "NewYork";
+				// option1.setAttribute("value", "NewYork");
+
+				// var option2 = document.createElement("option");
+				// option2.innerText = "Chicago";
+				// option1.setAttribute("value", "Chicago");
+
+				// var option3 = document.createElement("option");
+				// option3.innerText = "LosAngeles";
+				// option1.setAttribute("value", "LosAngeles");
+
+				// citiesDropDown.appendChild(option1);
+				// citiesDropDown.appendChild(option2);
+				// citiesDropDown.appendChild(option3);
+ 			} else if (country==="Germany") {
+ 				citiesDropDown.innerHTML="";
+ 				var cities = ["Berlin","Munich","Hamburg"];
+
+ 				for (city of cities) {
+ 					var op = document.createElement("option");
+ 					op.innerText=city;
+ 					op.setAttribute("value",city);
+ 					citiesDropDown.appendChild(op);
+
+ 				}
+ 			} else if (country==="France") {
+ 				console.log("hello france");
+ 				citiesDropDown.innerHTML="";
+ 				var cities = ["Paris","Marseillie","Bordeaux"];
+
+ 				for (city of cities) {
+ 					var op = document.createElement("option");
+ 					op.innerText=city;
+ 					op.setAttribute("value", city);
+ 					citiesDropDown.appendChild(op);
+ 				}
+ 			}	
+ 			
+ 		}
+
+ 		
+ 		/*	
+ 		var cars = ["audi", "suzuki", "kia", "toyota", "mercedes", "hyundai"];
+		// 1
+		for (var i = 0; i < cars.length; i++) {
+			console.log("loop 1: the car is " + cars[i]);
+		}
+		// 2
+		for (var hannah of cars) {
+			console.log("loop 2: the car is " + hannah);
+		}
+		// 3
+		for (var hannah in cars) {
+			console.log("loop 3: the index is " + hannah);
+			console.log("loop 3: the car is " + cars[hannah]);
+		}
+		// print the car at 4th index
+		console.log("the car is " + cars[4]);
+		*/
+		var nums = [56,34,27,-65,27,-88,-17,-27,-88,-43,45,39,57,90,-12,66,12,7,13,-7,34,27,14,99,87,44,23,33];
+		/*
+		0. print all the numbers		
+		1. print all the negative numbers
+		2. print all the positive numbers
+		3. print all the numbers that are between -10 and 40
+		4. print the sum of all positive numbers
+		5. print the sum of all negative numbers
+		6. print the sum of all numbers
+		7. print the sum of all positive even numbers
+		8. print the sum of all negative numbers that are odd
+		*/
+		for (num of nums) {
+			console.log("quesion 0",num);
+		}
+		for (num of nums) {
+		  if(num<0){
+		  	console.log("quesion 1",num);
+		  }
+
+		}
+		for (num of nums) {
+			if(num>0) {
+				console.log("quesion 2",num);
+			}
+		}
+		for (num of nums) {
+			if (num<40 && num>-10) {
+				console.log("quesion3",num);
+			}
+		}
+		var sum =0
+		for (num of nums) {
+			if (num %2===0)
+				sum=sum+num;
+		}console.log("quesion4",sum);
+
+		var sum= 0
+		for (num of nums) {
+			if (num % 2 !=0){
+				sum=sum+num;
+			}
+		}console.log("quesion5",sum);
+
+		var sum = 0
+		for (num of nums) {
+			sum=sum+num;
+		}console.log("quesion6",sum);
+
+		var sum = 0
+		for (num of nums) {
+			if (num %2 === 0 && num>0){
+				sum=sum+num;
+			}
+		}console.log("quesion7",sum);
+
+		var sum = 0
+		for (num of nums) 
+		{
+			if (num%2 !=0 && num<0) {
+				sum=sum+num;
+			}
+		}console.log ("quesion8",sum);
+
+/*
+		1. What is a function parameter in javascript?
+		2. Do some research on document createElement
+		3. Do some research on document setAttribute
+		4. Do some research on document appendChild
+		4. Do some resarch on innerHTML
+		*/
+
+		var countries = ["Japan", "Mexico", "USA", "Korea", "Germany", "France", "Portugal", "Italy", "South Africa", "Spain"];
+		//1. print all of the countries using for loop
+		//2. print only Korea, Portugal and Italy using for loop
+		//3. print only the countries that have odd index(홀수)
+		//4. print only the countries that have even index(짝수)
+		for (var i = 0; i < countries.length; i++) {
+			console.log ("Question #1" , countries[i]);
+		}
+		for (var option of countries) {
+			console.log ("Question #", option);
+		}
+		for (var option in countries) {
+			console.log ("Question #1" , option);
+		}
+
+		for(country of countries) {
+			if(country=="Korea"||country=="Portugal"||country=="Italy") {
+				console.log("Question #2" ,country);
+			}
+		}
+                  
+         for (var i = 0; i < countries.length; i++) {
+         	if (i % 2 != 0 ) {
+         		console.log("Question #3", countries[i]);
+         	}
+         }
+			
+		 for (var i = 0; i < countries.length; i++) {
+         	if (i % 2 === 0) {
+         		console.log("Qestion #4",countries[i]);
+         	}
+
+         }   
+	
+
+
+
+
+
+	</script>
+</body>
+</html>
+
